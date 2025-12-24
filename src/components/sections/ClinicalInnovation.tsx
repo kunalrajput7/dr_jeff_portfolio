@@ -3,99 +3,15 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-
-const loopStages = [
-    { id: "identify", title: "Identify", desc: "Innovation begins at the incision. I identify inefficiencies in real-time during complex spine surgery, where every second counts." },
-    { id: "invent", title: "Invent", desc: "I design and patent a device to fix it." },
-    { id: "incubate", title: "Incubate", desc: "IntuitiveX builds the business case." },
-    { id: "impact", title: "Impact", desc: "The technology reaches patients worldwide." }
-];
+import { ClinicalIdentity } from "./ClinicalIdentity";
 
 export function ClinicalInnovation() {
-    const [activeStage, setActiveStage] = useState(0);
-
     return (
         <section id="clinical-innovation" className="relative pt-0 md:pt-12 pb-32 md:pb-48 overflow-hidden cinematic-studio-light">
             <div className="container mx-auto">
-                {/* 2.5.3: The Innovation Loop */}
-                <div className="py-40 border-y border-executive-navy/5">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        <div className="relative aspect-square max-w-md mx-auto">
-                            {/* Circular Diagram SVG */}
-                            <svg viewBox="0 0 100 100" className="w-full h-full">
-                                <circle cx="50" cy="50" r="45" fill="none" stroke="#0A192F10" strokeWidth="0.5" />
-                                {loopStages.map((stage, i) => {
-                                    const angle = (i * 90) - 90;
-                                    const rad = angle * (Math.PI / 180);
-                                    const x = 50 + 45 * Math.cos(rad);
-                                    const y = 50 + 45 * Math.sin(rad);
-                                    return (
-                                        <g key={stage.id} onClick={() => setActiveStage(i)} className="cursor-pointer group">
-                                            <motion.circle
-                                                cx={x} cy={y} r="4"
-                                                fill={activeStage === i ? "#D4AF37" : "#0A192F20"}
-                                                className="transition-colors duration-500"
-                                            />
-                                            <text
-                                                x={x} y={y + 10}
-                                                textAnchor="middle"
-                                                className={cn(
-                                                    "font-sans text-[3px] font-black uppercase tracking-[0.2em] transition-all",
-                                                    activeStage === i ? "fill-executive-navy" : "fill-executive-navy/20"
-                                                )}
-                                            >
-                                                {stage.title}
-                                            </text>
-                                        </g>
-                                    );
-                                })}
-                                {/* Mechanical Shutter Representation */}
-                                <motion.circle
-                                    animate={{ rotate: activeStage * 90 }}
-                                    cx="50" cy="50" r="15" fill="none" stroke="#0A192F" strokeWidth="0.5" strokeDasharray="5,5"
-                                />
-                            </svg>
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="font-serif text-5xl italic text-executive-navy">0{activeStage + 1}</span>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col justify-center">
-                            {/* Context HUD */}
-                            <div className="mb-12 font-sans text-[10px] font-black tracking-[0.2em] text-executive-navy/40 flex items-center gap-4">
-                                <span className="w-2 h-2 bg-gold-foil rounded-full animate-pulse" />
-                                <AnimatePresence mode="wait">
-                                    <motion.span
-                                        key={activeStage}
-                                        initial={{ opacity: 0, y: 5 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: -5 }}
-                                    >
-                                        {activeStage === 0 && "SYSTEM STATUS: SCANNING SURGICAL FIELD..."}
-                                        {activeStage === 1 && "SYSTEM STATUS: GENERATING PROTOTYPES..."}
-                                        {activeStage === 2 && "SYSTEM STATUS: VALIDATING MARKET FIT..."}
-                                        {activeStage === 3 && "SYSTEM STATUS: DEPLOYING GLOBAL SOLUTION..."}
-                                    </motion.span>
-                                </AnimatePresence>
-                            </div>
-
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={activeStage}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: -20 }}
-                                    className="space-y-6"
-                                >
-                                    <h5 className="font-serif text-5xl md:text-6xl text-executive-navy italic">{loopStages[activeStage].title}</h5>
-                                    <p className="font-sans text-xl text-executive-navy/80 leading-relaxed">
-                                        {loopStages[activeStage].desc}
-                                    </p>
-                                    <div className="h-[2px] w-24 bg-proliance-blue" />
-                                </motion.div>
-                            </AnimatePresence>
-                        </div>
-                    </div>
+                {/* 2.5.3: The Innovation Loop -> Replaced with Clinical Identity */}
+                <div className="py-20 border-y border-executive-navy/5">
+                    <ClinicalIdentity />
                 </div>
 
                 {/* 2.5.4: The Family Test Manifesto */}

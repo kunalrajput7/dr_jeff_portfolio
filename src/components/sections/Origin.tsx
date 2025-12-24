@@ -42,38 +42,37 @@ export function Origin() {
                     </div>
 
                     {/* Timeline Nodes */}
-                    <div className="space-y-40 relative z-10">
+                    {/* Micro-Timeline Nodes */}
+                    <div className="space-y-16 relative z-10 py-12">
                         {timelineEvents.map((event, index) => (
-                            <div key={event.year} className={`flex flex-col md:flex-row items-center gap-10 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
-                                <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+                            <div key={event.year} className={`flex items-center gap-12 ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
+                                {/* Content Side */}
+                                <div className={cn("w-1/2 flex flex-col", index % 2 === 0 ? "items-start text-left" : "items-end text-right")}>
                                     <motion.div
-                                        initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: false, amount: 0.5 }}
-                                        transition={{ duration: 0.6 }}
-                                        className={cn(
-                                            "bg-executive-navy/90 backdrop-blur-xl p-8 rounded-[2rem] border border-white/5 shadow-xl w-full",
-                                            index % 2 === 0 ? "text-right pr-6" : "text-left pl-6"
-                                        )}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: false, margin: "-50px" }}
+                                        transition={{ duration: 0.5 }}
+                                        className="group cursor-default"
                                     >
-                                        <span className="font-serif text-3xl md:text-4xl italic text-gold-foil mb-4 block">{event.year}</span>
-                                        <h4 className="font-sans text-xl font-black text-white uppercase tracking-widest mb-4">{event.title}</h4>
-                                        <p className="font-sans text-sm text-white/70 leading-relaxed font-bold">{event.desc}</p>
+                                        <span className="font-serif text-xl italic text-gold-foil mb-1 block group-hover:text-executive-navy transition-colors">{event.year}</span>
+                                        <h4 className="font-sans text-sm font-black text-executive-navy uppercase tracking-widest mb-2">{event.title}</h4>
+                                        <p className="font-sans text-xs text-executive-navy/70 leading-relaxed font-bold max-w-[250px]">{event.desc}</p>
                                     </motion.div>
                                 </div>
 
-                                <div className="flex-shrink-0 z-20">
+                                {/* Center Node */}
+                                <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
                                     <motion.div
                                         initial={{ scale: 0 }}
                                         whileInView={{ scale: 1 }}
                                         viewport={{ once: true }}
-                                        className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-executive-black border-2 border-gold-foil flex items-center justify-center text-3xl md:text-4xl shadow-[0_0_20px_rgba(212,175,55,0.3)]"
-                                    >
-                                        {event.icon}
-                                    </motion.div>
+                                        className="h-3 w-3 rounded-full bg-executive-black border border-gold-foil shadow-[0_0_10px_rgba(212,175,55,0.5)] z-20"
+                                    />
                                 </div>
 
-                                <div className="md:w-1/2" />
+                                {/* Empty Side for Balance */}
+                                <div className="w-1/2" />
                             </div>
                         ))}
                     </div>
