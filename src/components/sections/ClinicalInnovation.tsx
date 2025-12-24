@@ -149,7 +149,7 @@ export function ClinicalInnovation() {
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <span className="font-sans text-[10px] font-black uppercase tracking-[0.5em] text-gold-foil mb-6 block">Future Strategy</span>
-                            <h5 className="font-serif text-5xl md:text-7xl mb-8 leading-tight">The 2025 Vision: <br /><span className="italic text-gold-foil">Excel Health.</span></h5>
+                            <h5 className="font-serif text-5xl md:text-7xl mb-8 leading-tight">The 2026 Vision: <br /><span className="italic text-gold-foil">Excel Health.</span></h5>
                             <button className="flex items-center gap-6 px-10 py-5 bg-white text-executive-navy rounded-full font-sans text-[10px] font-black uppercase tracking-widest hover:bg-gold-foil transition-colors group">
                                 Explore the Future of Care
                                 <svg viewBox="0 0 24 24" className="w-4 h-4 group-hover:translate-x-2 transition-transform">

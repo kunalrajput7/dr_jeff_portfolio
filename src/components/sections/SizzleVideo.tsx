@@ -20,7 +20,7 @@ export function SizzleVideo() {
                         transition={{ duration: 1.5 }}
                         className="font-sans text-[10px] md:text-xs font-black uppercase text-executive-navy/70 mb-12 text-center"
                     >
-                        [ The Physician-Founder Sizzle ]
+                        [ The Physician-Founder Sizzle Vide ]
                     </motion.p>
 
                     {/* Animated Video Placeholder Box */}
@@ -62,7 +62,7 @@ export function SizzleVideo() {
                         {/* Text Overlay */}
                         <div className="absolute bottom-6 left-6 md:bottom-12 md:left-12">
                             <h3 className="font-serif text-3xl text-white italic">Precision Meets Purpose.</h3>
-                            <p className="font-sans text-[10px] uppercase font-black tracking-widest text-white/40 mt-2">Coming Soon • Q1 2025</p>
+                            <p className="font-sans text-[10px] uppercase font-black tracking-widest text-white/40 mt-2">Coming Soon • 2026</p>
                         </div>
                     </motion.div>
                 </div>

@@ -43,9 +43,25 @@ export function Hero() {
                     </div>
 
                     {/* Placeholder for Surgeon Image */}
-                    <div className="absolute inset-0 z-0 opacity-20 transition-opacity duration-500 hover:opacity-100">
-                        {/* We will use a real image later if provided, for now a gradient/placeholder */}
-                        <div className="h-full w-full bg-linear-to-tr from-clinical-white to-transparent" />
+                    {/* Surgeon Background Image */}
+                    <div className="absolute inset-0 z-0">
+                        <motion.div
+                            className="relative h-full w-full"
+                            initial={{ scale: 1.1 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 1.5, ease: "easeOut" }}
+                        >
+                            <Image
+                                src="/jef1.jpg"
+                                alt="Dr. Jeffrey Roh - Surgeon"
+                                fill
+                                className="object-cover object-top opacity-40 transition-opacity duration-700 ease-in-out hover:opacity-80 grayscale hover:grayscale-0"
+                                priority
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                            {/* Gradient Overlay for Text Readability */}
+                            <div className="absolute inset-0 bg-linear-to-t from-clinical-white via-transparent to-transparent opacity-80" />
+                        </motion.div>
                     </div>
                 </motion.div>
 
@@ -80,8 +96,25 @@ export function Hero() {
                     </div>
 
                     {/* Placeholder for Founder Image */}
-                    <div className="absolute inset-0 z-0 opacity-10 transition-opacity duration-500 hover:opacity-30">
-                        <div className="h-full w-full bg-linear-to-bl from-executive-black to-transparent" />
+                    {/* Founder Background Image */}
+                    <div className="absolute inset-0 z-0">
+                        <motion.div
+                            className="relative h-full w-full"
+                            initial={{ scale: 1.1 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                        >
+                            <Image
+                                src="/jef2.jpg"
+                                alt="Dr. Jeffrey Roh - Founder"
+                                fill
+                                className="object-cover object-center opacity-30 transition-opacity duration-700 ease-in-out hover:opacity-70 grayscale hover:grayscale-0"
+                                priority
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                            {/* Gradient Overlay */}
+                            <div className="absolute inset-0 bg-executive-navy/40 mix-blend-multiply" />
+                        </motion.div>
                     </div>
                 </motion.div>
             </div>

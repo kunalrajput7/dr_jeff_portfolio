@@ -88,18 +88,36 @@ export function Origin() {
                     className="mt-60 max-w-5xl mx-auto p-12 md:p-20 rounded-[3rem] bg-executive-black border border-gold-foil relative overflow-hidden group text-center md:text-left shadow-2xl"
                 >
                     <div className="absolute top-0 right-0 w-64 h-64 bg-proliance-blue/10 blur-[100px] pointer-events-none" />
-                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <h5 className="font-serif text-4xl md:text-6xl text-white leading-tight mb-8 italic">Encouraging <span className="text-proliance-blue">Equity</span> in Healthcare.</h5>
-                            <p className="font-sans text-lg text-white/70 leading-relaxed mb-10 font-bold">
-                                The Roh Family MBA Diversity Fellowship at the UW Foster School of Business supports the next generation of underrepresented leaders in the business of health.
-                            </p>
-                            <button className="px-10 py-4 border border-gold-foil hover:border-white transition-colors text-white font-sans text-[10px] font-black uppercase tracking-widest rounded-full">
-                                Learn More
-                            </button>
-                        </div>
-                        <div className="aspect-[4/5] bg-executive-navy/50 rounded-2xl border border-white/10 flex items-center justify-center text-white/20 uppercase font-sans text-[10px] tracking-[1em] rotate-2 group-hover:rotate-0 transition-transform duration-700">
-                            [ FELLOWSHIP_PHOTO ]
+                    <div className="relative z-10 flex flex-col gap-12">
+                        {/* Title on Top */}
+                        <h5 className="font-serif text-4xl md:text-6xl text-white leading-tight italic text-center md:text-left max-w-4xl">
+                            Encouraging <span className="text-proliance-blue">Equity</span> in Healthcare.
+                        </h5>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                            {/* Text Block - Left (Smaller) */}
+                            <div className="lg:col-span-4 flex flex-col items-start">
+                                <p className="font-sans text-lg text-white/70 leading-relaxed mb-10 font-bold">
+                                    The Roh Family MBA Diversity Fellowship at the UW Foster School of Business supports the next generation of underrepresented leaders in the business of health.
+                                </p>
+                                <button className="px-10 py-4 border border-gold-foil hover:border-white transition-colors text-white font-sans text-[10px] font-black uppercase tracking-widest rounded-full">
+                                    Learn More
+                                </button>
+                            </div>
+
+                            {/* Video Block - Right (Larger) */}
+                            <div className="lg:col-span-8 w-full">
+                                <div className="aspect-video bg-executive-navy/50 rounded-2xl border border-white/10 overflow-hidden rotate-1 group-hover:rotate-0 transition-transform duration-700 shadow-2xl">
+                                    <video
+                                        src="/UW.mp4"
+                                        className="w-full h-full object-cover"
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </motion.div>
