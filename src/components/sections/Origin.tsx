@@ -52,7 +52,7 @@ export function Origin() {
                                         viewport={{ once: false, amount: 0.5 }}
                                         transition={{ duration: 0.6 }}
                                         className={cn(
-                                            "bg-executive-navy/50 backdrop-blur-xl p-8 rounded-[2rem] border border-white/5 shadow-xl w-full",
+                                            "bg-executive-navy/90 backdrop-blur-xl p-8 rounded-[2rem] border border-white/5 shadow-xl w-full",
                                             index % 2 === 0 ? "text-right pr-6" : "text-left pl-6"
                                         )}
                                     >
@@ -98,7 +98,7 @@ export function Origin() {
                                 Learn More
                             </button>
                         </div>
-                        <div className="aspect-4/5 bg-executive-navy/50 rounded-2xl border border-white/10 flex items-center justify-center text-white/20 uppercase font-sans text-[10px] tracking-[1em] rotate-2 group-hover:rotate-0 transition-transform duration-700">
+                        <div className="aspect-[4/5] bg-executive-navy/50 rounded-2xl border border-white/10 flex items-center justify-center text-white/20 uppercase font-sans text-[10px] tracking-[1em] rotate-2 group-hover:rotate-0 transition-transform duration-700">
                             [ FELLOWSHIP_PHOTO ]
                         </div>
                     </div>

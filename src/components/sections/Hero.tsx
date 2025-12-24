@@ -9,7 +9,7 @@ export function Hero() {
     const [hoveredSide, setHoveredSide] = useState<"left" | "right" | null>(null);
 
     return (
-        <section className="relative min-h-screen w-full overflow-hidden bg-executive-black">
+        <section className="relative h-screen w-full overflow-hidden bg-executive-black">
             <div className="flex h-full w-full flex-col md:flex-row">
                 {/* Left Side: The Surgeon */}
                 <motion.div

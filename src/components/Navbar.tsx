@@ -22,7 +22,6 @@ export function Navbar() {
     useEffect(() => {
         const unsubscribe = scrollYProgress.on("change", (v) => {
             setIsDark(v > 0.4);
-            setCtaText(v > 0.4 ? "Partner with IntuitiveX" : "Book Consultation");
         });
         return () => unsubscribe();
     }, [scrollYProgress]);

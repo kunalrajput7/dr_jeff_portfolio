@@ -31,8 +31,8 @@ export function RohAI() {
                     <h3 className="font-serif text-4xl md:text-6xl text-executive-navy italic">Dr. Roh AI Companion.</h3>
                 </motion.div>
 
-                {/* Massive Premium Window Frame - Optimized to ~1040x640 ratio */}
-                <div className="relative w-full max-w-5xl aspect-[1040/640] group">
+                {/* Massive Premium Window Frame - Optimized to ~85vw x 90vh */}
+                <div className="relative w-[95vw] h-[80vh] md:w-[85vw] md:h-[100vh] group">
                     {/* Floating Informative Text Tags */}
                     <motion.div
                         animate={{ y: [0, -10, 0] }}
@@ -58,12 +58,8 @@ export function RohAI() {
                         </div>
                     </motion.div>
 
-                    {/* The Frame Container */}
-                    <motion.div
-                        initial={{ scale: 0.9, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        viewport={{ once: false, amount: 0.2 }}
-                        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                    {/* The Frame Container - Static (No Entry Animation) */}
+                    <div
                         className="relative w-full h-full bg-[#f9fafb] rounded-[2rem] overflow-hidden shadow-[0_50px_100px_-30px_rgba(10,25,47,0.2)] border border-executive-navy/10 flex flex-col"
                     >
                         {/* Top Control Bar Decoration */}
@@ -79,8 +75,7 @@ export function RohAI() {
                                 </span>
                             </div>
                         </div>
-
-                        {/* Corner Accents (Inside the frame) */}
+                        {/* Text Overlay */}
                         <div className="absolute top-12 left-0 w-8 h-8 border-t-2 border-l-2 border-gold-foil m-4 z-20 opacity-40 pointer-events-none" />
                         <div className="absolute top-12 right-0 w-8 h-8 border-t-2 border-r-2 border-gold-foil m-4 z-20 opacity-40 pointer-events-none" />
                         <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold-foil m-4 z-20 opacity-40 pointer-events-none" />
@@ -92,10 +87,12 @@ export function RohAI() {
                                 src="https://excelhealth1476.companionstudio.ai/"
                                 className="absolute inset-0 w-full h-full border-none"
                                 title="Dr. Roh AI Companion"
-                                allow="microphone"
+                                allow="microphone; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-downloads"
+                                loading="eager"
                             />
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
 
                 {/* Footer Subtext */}

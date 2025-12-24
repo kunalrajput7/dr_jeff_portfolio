@@ -13,7 +13,7 @@ export function Bridge() {
     const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
     return (
-        <section id="bridge" ref={containerRef} className="relative min-h-screen w-full overflow-hidden cinematic-studio-light">
+        <section id="bridge" ref={containerRef} className="relative h-screen w-full overflow-hidden cinematic-studio-light">
             {/* Parallax Video Container */}
             <motion.div
                 style={{ y }}

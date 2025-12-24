@@ -44,7 +44,7 @@ const pillars = [
 ];
 
 const loopStages = [
-    { id: "identify", title: "Identify", desc: "I encounter a clinical problem in the OR." },
+    { id: "identify", title: "Identify", desc: "Innovation begins at the incision. I identify inefficiencies in real-time during complex spine surgery, where every second counts." },
     { id: "invent", title: "Invent", desc: "I design and patent a device to fix it." },
     { id: "incubate", title: "Incubate", desc: "IntuitiveX builds the business case." },
     { id: "impact", title: "Impact", desc: "The technology reaches patients worldwide." }
@@ -60,7 +60,7 @@ export function Clinical() {
                 <div className="max-w-3xl mx-auto text-center mb-40">
                     <p className="font-sans text-[10px] font-black uppercase tracking-[0.5em] text-executive-navy/70 mb-6">The Operating System</p>
                     <div className="relative inline-block mb-8">
-                        <h3 className="font-serif text-6xl md:text-9xl text-executive-navy">Kaizen (改善)</h3>
+                        <h3 className="font-serif text-4xl md:text-9xl text-executive-navy">Kaizen (改善)</h3>
                         <motion.div
                             initial={{ scaleX: 0 }}
                             whileInView={{ scaleX: 1 }}
@@ -159,14 +159,35 @@ export function Clinical() {
                 <div className="mt-48 relative overflow-hidden">
                     <div className="absolute left-0 top-0 bottom-0 w-4 bg-gold-foil rounded-full" />
                     <div className="pl-16 py-12">
-                        <motion.p
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: false }}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-100px" }}
                             className="font-serif text-3xl md:text-5xl lg:text-6xl text-executive-navy leading-tight italic"
                         >
-                            "The spine is the body's foundation. My challenge is embracing innovation while preserving the timeless art of surgical judgment. I apply the <span className="text-gold-foil not-italic font-bold">Family Test</span>: If I wouldn't do it to my family, I won't do it to you."
-                        </motion.p>
+                            {/* Static Prefix */}
+                            <span>"The spine is the body's foundation. My challenge is embracing innovation while preserving the timeless art of surgical judgment. I apply the </span>
+
+                            {/* Animated Family Test */}
+                            <span className="text-gold-foil not-italic font-bold">Family Test</span>
+
+                            {/* Animated Suffix with Typing Effect */}
+                            <span>: </span>
+                            {"If I wouldn't do it to my family, I won't do it to you.".split(" ").map((word, i) => (
+                                <motion.span
+                                    key={i}
+                                    variants={{
+                                        hidden: { opacity: 0, y: 10 },
+                                        visible: { opacity: 1, y: 0 }
+                                    }}
+                                    transition={{ duration: 0.05, delay: i * 0.05 + 0.5 }}
+                                    className="inline-block mr-[0.2em]"
+                                >
+                                    {word}
+                                </motion.span>
+                            ))}
+                            "
+                        </motion.div>
                     </div>
                 </div>
 

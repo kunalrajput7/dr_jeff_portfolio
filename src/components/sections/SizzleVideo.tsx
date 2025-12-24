@@ -33,7 +33,7 @@ export function SizzleVideo() {
                     >
                         {/* Decorative Premium Borders */}
                         <div className="absolute inset-4 border border-white/10 rounded-xl" />
-                        <div className="absolute inset-0 border-[20px] border-executive-navy/50" />
+                        <div className="absolute inset-0 border-[10px] md:border-[20px] border-executive-navy/50" />
 
                         {/* Corner Accents */}
                         <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-gold-foil m-4" />
@@ -60,7 +60,7 @@ export function SizzleVideo() {
                         </div>
 
                         {/* Text Overlay */}
-                        <div className="absolute bottom-12 left-12">
+                        <div className="absolute bottom-6 left-6 md:bottom-12 md:left-12">
                             <h3 className="font-serif text-3xl text-white italic">Precision Meets Purpose.</h3>
                             <p className="font-sans text-[10px] uppercase font-black tracking-widest text-white/40 mt-2">Coming Soon • Q1 2025</p>
                         </div>
