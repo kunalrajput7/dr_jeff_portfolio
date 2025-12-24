@@ -1,26 +1,167 @@
 @import "tailwindcss";
 
+@theme {
+  --color-clinical-white: #F8F9FA;
+  --color-clinical-pure: #FFFFFF;
+  --color-executive-navy: #0A192F;
+  --color-executive-black: #020C1B;
+  --color-proliance-blue: #005EB8;
+  --color-gold-foil: #D4AF37;
+  --color-text-grey: #4B5563;
+
+  --font-serif: var(--font-instrument-serif);
+  --font-sans: var(--font-inter);
+
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+/* Cinematic Grain Overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_filmgrain.png");
+  animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, 0%);
+  }
+
+  70% {
+    transform: translate(0%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 35%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+/* Cinematic Vignette Utility */
+.cinematic-vignette {
+  position: relative;
+}
+
+.cinematic-vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 150px rgba(10, 25, 47, 0.05);
+  z-index: 5;
+}
+
+.cinematic-vignette-dark::after {
+  box-shadow: inset 0 0 200px rgba(2, 12, 27, 0.8);
+}
+
+/* Studio Photography Light */
+.cinematic-studio-light {
+  background: radial-gradient(circle at center, #ffffff 0%, #f0f2f5 30%, #d1d5db 70%, #9ca3af 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.cinematic-studio-light::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 30%, rgba(10, 25, 47, 0.15) 100%);
+  z-index: 1;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8F9FA;
+  --foreground: #0A192F;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.container {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (min-width: 768px) {
+  .container {
+    max-width: 85%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 80%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Lenis CSS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
