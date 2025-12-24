@@ -23,12 +23,27 @@ export function RohAI() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
-                    className="text-center mb-16"
+                    className="text-center mb-16 flex flex-col items-center gap-6"
                 >
-                    <p className="font-sans text-[10px] md:text-xs font-black uppercase text-executive-navy/60 tracking-[0.4em] mb-4">
+                    <p className="font-sans text-[10px] md:text-xs font-black uppercase text-executive-navy/60 tracking-[0.4em]">
                         [ Interactive Digital Twin ]
                     </p>
-                    <h3 className="font-serif text-4xl md:text-6xl text-executive-navy italic">Dr. Roh AI Companion.</h3>
+
+                    <div className="flex items-center gap-6">
+                        {/* Animated Portrait */}
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-proliance-blue/30 rounded-full animate-ping" />
+                            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-executive-navy shadow-lg">
+                                <img
+                                    src="/jef3.jpg"
+                                    alt="Dr. Jeffrey Roh"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        </div>
+
+                        <h3 className="font-serif text-4xl md:text-6xl text-executive-navy italic">Dr. Roh AI Companion.</h3>
+                    </div>
                 </motion.div>
 
                 {/* Massive Premium Window Frame - Optimized to ~85vw x 90vh */}
