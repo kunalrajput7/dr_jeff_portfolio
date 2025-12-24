@@ -24,7 +24,7 @@ export function Bridge() {
 
                 {/* Fallback Placeholder (using gradient as video isn't provided yet) */}
                 <div className="h-full w-full bg-linear-to-b from-executive-navy/5 to-gold-foil/5 flex items-center justify-center">
-                    <p className="font-sans text-xs font-black text-executive-navy/20 uppercase tracking-[1em]">Sizzle Reel Placeholder</p>
+                    <p className="font-sans text-xs font-black text-executive-navy/20 uppercase tracking-[1em]">Dr. Jeffrey Roh</p>
                 </div>
 
                 {/* Real video tag would go here: 

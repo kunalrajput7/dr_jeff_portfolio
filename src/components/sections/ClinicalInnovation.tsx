@@ -15,7 +15,7 @@ export function ClinicalInnovation() {
     const [activeStage, setActiveStage] = useState(0);
 
     return (
-        <section id="clinical-innovation" className="relative py-32 md:py-48 overflow-hidden cinematic-studio-light">
+        <section id="clinical-innovation" className="relative pt-0 md:pt-12 pb-32 md:pb-48 overflow-hidden cinematic-studio-light">
             <div className="container mx-auto">
                 {/* 2.5.3: The Innovation Loop */}
                 <div className="py-40 border-y border-executive-navy/5">
@@ -61,6 +61,24 @@ export function ClinicalInnovation() {
                         </div>
 
                         <div className="flex flex-col justify-center">
+                            {/* Context HUD */}
+                            <div className="mb-12 font-sans text-[10px] font-black tracking-[0.2em] text-executive-navy/40 flex items-center gap-4">
+                                <span className="w-2 h-2 bg-gold-foil rounded-full animate-pulse" />
+                                <AnimatePresence mode="wait">
+                                    <motion.span
+                                        key={activeStage}
+                                        initial={{ opacity: 0, y: 5 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -5 }}
+                                    >
+                                        {activeStage === 0 && "SYSTEM STATUS: SCANNING SURGICAL FIELD..."}
+                                        {activeStage === 1 && "SYSTEM STATUS: GENERATING PROTOTYPES..."}
+                                        {activeStage === 2 && "SYSTEM STATUS: VALIDATING MARKET FIT..."}
+                                        {activeStage === 3 && "SYSTEM STATUS: DEPLOYING GLOBAL SOLUTION..."}
+                                    </motion.span>
+                                </AnimatePresence>
+                            </div>
+
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeStage}

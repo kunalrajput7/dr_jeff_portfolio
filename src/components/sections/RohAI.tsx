@@ -11,7 +11,7 @@ const suggestions = [
 
 export function RohAI() {
     return (
-        <section id="contact" className="relative min-h-screen w-full overflow-hidden flex items-center justify-center cinematic-studio-light py-32 md:py-48">
+        <section id="contact" className="relative min-h-screen w-full overflow-hidden flex items-center justify-center cinematic-studio-light pt-32 md:pt-48 pb-0 md:pb-12">
             {/* Background Narrative Grid */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(#0A192F_1px,transparent_1px)] [background-size:40px_40px]" />
