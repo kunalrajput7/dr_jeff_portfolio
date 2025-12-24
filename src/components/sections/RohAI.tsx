@@ -88,9 +88,25 @@ export function RohAI() {
                                 className="absolute inset-0 w-full h-full border-none"
                                 title="Dr. Roh AI Companion"
                                 allow="microphone; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-downloads"
                                 loading="eager"
                             />
+
+                            {/* Overlay Button for Full Functionality */}
+                            <div className="absolute bottom-8 right-8 z-20">
+                                <a
+                                    href="https://excelhealth1476.companionstudio.ai/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group relative inline-flex items-center gap-3 px-6 py-3 bg-executive-navy/90 backdrop-blur-md border border-white/20 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:bg-executive-navy hover:scale-105 transition-all duration-300"
+                                >
+                                    <span className="relative flex h-3 w-3">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                                    </span>
+                                    <span className="font-outfit text-white font-medium tracking-wide text-sm">Launch Interactive Demo</span>
+                                    <svg className="w-4 h-4 text-white/70 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
