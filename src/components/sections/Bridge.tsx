@@ -111,7 +111,7 @@ export function Bridge() {
                                 <Play className="w-10 h-10 md:w-12 md:h-12 text-white fill-white translate-x-1" />
                             </div>
                             <p className="mt-4 text-center font-sans text-xs font-black uppercase tracking-[0.4em] text-white/80">
-                                Watch Sizzle Reel
+                                THE JOURNEY SO FAR
                             </p>
                         </motion.div>
                     )}
