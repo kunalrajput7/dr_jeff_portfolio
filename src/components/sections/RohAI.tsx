@@ -42,7 +42,7 @@ export function RohAI() {
                             </div>
                         </div>
 
-                        <h3 className="font-serif text-4xl md:text-6xl text-executive-navy italic">Dr. Roh AI Companion.</h3>
+                        <h3 className="font-serif text-4xl md:text-6xl text-black italic">Dr. Roh AI Companion.</h3>
                     </div>
                 </motion.div>
 
@@ -118,7 +118,7 @@ export function RohAI() {
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                                     </span>
-                                    <span className="font-outfit text-white font-medium tracking-wide text-sm">Launch Interactive Demo</span>
+                                    <span className="font-outfit text-white font-medium tracking-wide text-sm">Start Conversation with Dr. Roh</span>
                                     <svg className="w-4 h-4 text-white/70 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                 </a>
                             </div>
