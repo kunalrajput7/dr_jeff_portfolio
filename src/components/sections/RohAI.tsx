@@ -25,9 +25,9 @@ export function RohAI() {
                     viewport={{ once: false }}
                     className="text-center mb-16 flex flex-col items-center gap-6"
                 >
-                    <p className="font-sans text-[10px] md:text-xs font-black uppercase text-executive-navy/60 tracking-[0.4em]">
+                    {/* <p className="font-sans text-[10px] md:text-xs font-black uppercase text-executive-navy/60 tracking-[0.4em]">
                         [ Interactive Digital Twin ]
-                    </p>
+                    </p> */}
 
                     <div className="flex items-center gap-6">
                         {/* Animated Portrait */}
@@ -42,7 +42,7 @@ export function RohAI() {
                             </div>
                         </div>
 
-                        <h3 className="font-serif text-4xl md:text-6xl text-black italic">Dr. Roh AI Companion.</h3>
+                        <h3 className="font-serif text-4xl md:text-6xl text-black italic">Surgical Patient Concierge</h3>
                     </div>
                 </motion.div>
 
@@ -84,11 +84,11 @@ export function RohAI() {
                                 <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
                                 <div className="w-3 h-3 rounded-full bg-[#28c840]" />
                             </div>
-                            <div className="flex-1 text-center pr-12">
+                            {/* <div className="flex-1 text-center pr-12">
                                 <span className="font-sans text-[10px] font-black uppercase tracking-[0.2em] text-executive-navy/40">
                                     https://excelhealth1476.companionstudio.ai/
                                 </span>
-                            </div>
+                            </div> */}
                         </div>
                         {/* Text Overlay */}
                         <div className="absolute top-12 left-0 w-8 h-8 border-t-2 border-l-2 border-gold-foil m-4 z-20 opacity-40 pointer-events-none" />

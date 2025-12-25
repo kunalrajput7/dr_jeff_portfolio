@@ -37,7 +37,7 @@ export function SizzleVideo() {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col items-center">
-                    <motion.p
+                    {/* <motion.p
                         initial={{ opacity: 0, letterSpacing: "0.5em" }}
                         whileInView={{ opacity: 1, letterSpacing: "0.3em" }}
                         viewport={{ once: false }}
@@ -45,7 +45,7 @@ export function SizzleVideo() {
                         className="font-sans text-[10px] md:text-xs font-black uppercase text-executive-navy/70 mb-12 text-center"
                     >
                         [ The Physician-Founder Sizzle Reel ]
-                    </motion.p>
+                    </motion.p> */}
 
                     {/* Animated Video Box */}
                     <motion.div
