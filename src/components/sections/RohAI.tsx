@@ -99,7 +99,7 @@ export function RohAI() {
                         {/* The Iframe Embedding */}
                         <div className="flex-1 w-full h-full relative">
                             <iframe
-                                src="https://excelhealth1476.companionstudio.ai/"
+                                src="https://excelhealthai.cognitionthrives.com/"
                                 className="absolute inset-0 w-full h-full border-none"
                                 title="Dr. Roh AI Companion"
                                 allow="microphone; clipboard-write; encrypted-media; picture-in-picture; web-share"
