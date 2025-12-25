@@ -59,8 +59,8 @@ export function SizzleVideo() {
                         {/* Video Element */}
                         <video
                             ref={videoRef}
-                            src="/bridge_video.mp4"
-                            poster="/sizzle-thumb.png"
+                            src="/sizzle_video.mp4"
+                            poster="/sizzle_thumb.png"
                             className="w-full h-full object-cover"
                             playsInline
                             loop
