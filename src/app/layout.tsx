@@ -19,7 +19,11 @@ export const metadata: Metadata = {
   title: "Dr. Jeffrey Roh | The Physician-Founder",
   description: "A dual-persona platform bridging Clinical Excellence and Venture Capital in medical innovation.",
   icons: {
-    icon: "/logo.jpg",
+    icon: [
+      { url: "/logo.jpg", type: "image/jpeg" },
+    ],
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
   },
 };
 
