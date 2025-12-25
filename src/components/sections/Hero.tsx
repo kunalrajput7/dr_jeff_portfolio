@@ -108,7 +108,7 @@ export function Hero() {
                                 src="/jef2.jpg"
                                 alt="Dr. Jeffrey Roh - Founder"
                                 fill
-                                className="object-cover object-center opacity-30 transition-opacity duration-700 ease-in-out hover:opacity-70 grayscale hover:grayscale-0"
+                                className="object-cover object-left opacity-30 transition-opacity duration-700 ease-in-out hover:opacity-70 grayscale hover:grayscale-0"
                                 priority
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
