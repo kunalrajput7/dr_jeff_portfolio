@@ -22,7 +22,7 @@ export function ClinicalInnovation() {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, margin: "-100px" }}
-                            className="font-serif text-3xl md:text-5xl lg:text-6xl text-executive-navy leading-tight italic"
+                            className="font-serif text-3xl md:text-5xl lg:text-6xl text-black leading-tight italic"
                         >
                             {/* Static Prefix */}
                             <span>"The spine is the body's foundation. My challenge is embracing innovation while preserving the timeless art of surgical judgment. I apply the </span>
@@ -50,12 +50,12 @@ export function ClinicalInnovation() {
                     </div>
                 </div>
 
-                {/* 2.5.5: The 2025 Vision */}
+                {/* 2.5.5: The 2026 Vision */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, amount: 0.2 }}
-                    className="mt-60 relative p-12 md:p-24 rounded-[4rem] bg-executive-navy text-white overflow-hidden shadow-2xl"
+                    className="mt-60 relative p-12 md:p-24 rounded-[4rem] bg-black text-white overflow-hidden shadow-2xl"
                 >
                     <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
                         {/* Abstract Spine Topology Background */}

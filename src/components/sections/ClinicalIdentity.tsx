@@ -36,7 +36,7 @@ export function ClinicalIdentity() {
                         viewport={{ once: false }}
                         className="mb-12"
                     >
-                        <h4 className="font-serif text-5xl md:text-7xl text-executive-navy mb-6">The Architecture of Preservation.</h4>
+                        <h4 className="font-serif text-5xl md:text-7xl text-black mb-6">The Architecture of Preservation.</h4>
                         <p className="font-sans text-xl text-executive-navy/70 max-w-2xl mx-auto leading-relaxed">
                             Minimally Invasive Spine Surgery (MISS) is not just a technique. It is a philosophy of respect for the human anatomy.
                         </p>
@@ -136,7 +136,7 @@ export function ClinicalIdentity() {
                 <div className="mb-20">
                     <div className="flex flex-col items-center gap-12 text-center">
                         <div className="max-w-2xl">
-                            <h5 className="font-serif text-4xl text-executive-navy italic mb-6">The Circle of Five.</h5>
+                            <h5 className="font-serif text-4xl text-black italic mb-6">The Circle of Five.</h5>
                             <p className="font-sans text-sm text-executive-navy/70 leading-relaxed font-bold mb-8">
                                 Surgery is the last resort. We exhaust every non-operative avenue—collaborating with sports medicine and physiatry—before we ever pick up a scalpel.
                             </p>
@@ -147,7 +147,7 @@ export function ClinicalIdentity() {
                                     key={member.id}
                                     whileHover={{ scale: 1.1, zIndex: 10, y: -10 }}
                                     className={cn(
-                                        "w-32 h-32 md:w-40 md:h-40 rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl border-4 border-white transition-all cursor-default shrink-0",
+                                        "w-32 h-32 md:w-40 md:h-40 rounded-full flex flex-col items-center justify-center text-center p-4 shadow-xl border-2 border-white transition-all cursor-default shrink-0",
                                         member.color,
                                         member.id === 5 ? "text-executive-navy" : "text-white"
                                     )}

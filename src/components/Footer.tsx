@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 
 export function Footer() {
     return (
-        <footer className="relative bg-executive-black pt-32 pb-16 overflow-hidden cinematic-vignette-dark">
+        <footer className="relative bg-black pt-32 pb-16 overflow-hidden cinematic-vignette-dark">
             {/* Massive Watermark Text */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-                <h2 className="text-[25vw] font-serif font-black text-white/[0.03] whitespace-nowrap leading-none transition-transform duration-1000">
-                    DR. JEFFREY ROH
+                <h2 className="text-[20vw] font-serif font-black text-white/[0.07] whitespace-nowrap leading-none transition-transform duration-1000">
+                    JEFFREY ROH
                 </h2>
             </div>
 

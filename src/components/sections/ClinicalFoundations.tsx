@@ -50,7 +50,7 @@ export function ClinicalFoundations() {
                 <div className="max-w-3xl mx-auto text-center mb-40">
                     <p className="font-sans text-[10px] font-black uppercase tracking-[0.5em] text-executive-navy/70 mb-6">The Operating System</p>
                     <div className="relative inline-block mb-8">
-                        <h3 className="font-serif text-4xl md:text-9xl text-executive-navy">Kaizen (改善)</h3>
+                        <h3 className="font-serif text-4xl md:text-9xl text-black">Kaizen (改善)</h3>
                         <motion.div
                             initial={{ scaleX: 0 }}
                             whileInView={{ scaleX: 1 }}

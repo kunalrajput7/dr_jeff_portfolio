@@ -29,7 +29,7 @@ export function Origin() {
             <div className="container mx-auto">
                 <div className="text-center mb-32">
                     <p className="font-sans text-[10px] font-black uppercase tracking-[0.4em] text-gold-foil mb-4">The Narrative</p>
-                    <h3 className="font-serif text-5xl md:text-8xl text-executive-navy">Origin & Impact.</h3>
+                    <h3 className="font-serif text-5xl md:text-8xl text-black">Origin & Impact.</h3>
                 </div>
 
                 <div className="relative max-w-4xl mx-auto">
@@ -84,7 +84,7 @@ export function Origin() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ duration: 0.8 }}
-                    className="mt-60 max-w-5xl mx-auto p-12 md:p-20 rounded-[3rem] bg-executive-black border border-gold-foil relative overflow-hidden group text-center md:text-left shadow-2xl"
+                    className="mt-60 max-w-5xl mx-auto p-12 md:p-20 rounded-[3rem] bg-black border border-gold-foil relative overflow-hidden group text-center md:text-left shadow-2xl"
                 >
                     <div className="absolute top-0 right-0 w-64 h-64 bg-proliance-blue/10 blur-[100px] pointer-events-none" />
                     <div className="relative z-10 flex flex-col gap-12">

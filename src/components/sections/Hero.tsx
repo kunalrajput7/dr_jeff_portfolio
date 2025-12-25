@@ -23,7 +23,7 @@ export function Hero() {
                 >
                     <div className="relative z-10 text-center md:text-left">
                         <motion.h2
-                            className="font-serif text-5xl font-light text-executive-navy md:text-8xl lg:text-9xl"
+                            className="font-serif text-5xl font-light text-black md:text-8xl lg:text-9xl"
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
@@ -70,7 +70,7 @@ export function Hero() {
                     className={cn(
                         "relative flex h-1/2 flex-col items-center justify-center p-12 transition-all duration-700 ease-in-out md:h-full",
                         hoveredSide === "right" ? "md:w-[60%]" : hoveredSide === "left" ? "md:w-[40%] opacity-50" : "md:w-1/2",
-                        "bg-executive-navy"
+                        "bg-black"
                     )}
                     onMouseEnter={() => setHoveredSide("right")}
                     onMouseLeave={() => setHoveredSide(null)}
@@ -113,7 +113,7 @@ export function Hero() {
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
                             {/* Gradient Overlay */}
-                            <div className="absolute inset-0 bg-executive-navy/40 mix-blend-multiply" />
+                            <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
                         </motion.div>
                     </div>
                 </motion.div>
@@ -128,7 +128,7 @@ export function Hero() {
                     transition={{ type: "spring", stiffness: 100, delay: 1 }}
                 >
                     <div className="text-center">
-                        <p className="font-serif text-xl font-black tracking-tighter text-executive-navy md:text-2xl">
+                        <p className="font-serif text-xl font-black tracking-tighter text-black md:text-2xl">
                             DR. JEFFREY <br /> ROH
                         </p>
                     </div>
@@ -143,7 +143,7 @@ export function Hero() {
                             <defs>
                                 <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
                             </defs>
-                            <text fontSize="7" className="font-sans font-black uppercase tracking-widest text-executive-navy/30">
+                            <text fontSize="7" className="font-sans font-black uppercase tracking-widest text-black/30">
                                 <textPath xlinkHref="#circle">
                                     • SURGEON • FOUNDER • INNOVATOR • CLINICIAN •
                                 </textPath>
@@ -159,8 +159,8 @@ export function Hero() {
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
             >
-                <div className="flex h-10 w-6 items-start justify-center rounded-full border border-executive-navy/20 p-2 md:h-12 md:w-7">
-                    <div className="h-2 w-1 rounded-full bg-proliance-blue md:h-3 md:w-1.5" />
+                <div className="flex h-10 w-6 items-start justify-center rounded-full border border-white/40 p-2 md:h-12 md:w-7">
+                    <div className="h-2 w-1 rounded-full bg-white md:h-3 md:w-1.5" />
                 </div>
             </motion.div>
         </section>

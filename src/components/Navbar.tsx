@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence, useScroll } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -21,10 +21,17 @@ export function Navbar() {
 
     useEffect(() => {
         const unsubscribe = scrollYProgress.on("change", (v) => {
-            setIsDark(v > 0.4);
+            setIsDark(v > 0.1);
         });
         return () => unsubscribe();
     }, [scrollYProgress]);
+
+    const bgOpacity = useTransform(scrollYProgress, [0, 0.2], [0.9, 0.1]);
+    const backgroundColor = useTransform(
+        scrollYProgress,
+        [0, 0.2],
+        ["rgba(248, 249, 250, 0.9)", "rgba(248, 249, 250, 0.1)"]
+    );
 
     return (
         <>
@@ -33,12 +40,14 @@ export function Navbar() {
                 animate={{ y: 0, opacity: 1 }}
                 className="fixed top-6 left-0 right-0 z-50 mx-auto w-full max-w-[95%] md:max-w-[85%] lg:max-w-[80%]"
             >
-                <div className={cn(
-                    "backdrop-blur-md rounded-full px-8 py-3 flex items-center justify-between shadow-2xl transition-all duration-500 border",
-                    isDark
-                        ? "bg-executive-navy/90 text-white border-white/5"
-                        : "bg-clinical-white/90 text-executive-navy border-executive-navy/5"
-                )}>
+                <motion.div
+                    style={{ backgroundColor }}
+                    className={cn(
+                        "backdrop-blur-md rounded-full px-8 py-3 flex items-center justify-between shadow-2xl transition-all duration-500 border",
+                        isDark
+                            ? "text-executive-navy border-executive-navy/10"
+                            : "text-executive-navy border-executive-navy/5"
+                    )}>
                     <Link href="/" className="font-serif font-black tracking-tight text-xl lg:text-2xl">
                         DR. JEFFREY ROH
                     </Link>
@@ -50,31 +59,31 @@ export function Navbar() {
                                 key={link.label}
                                 href={link.href}
                                 className={cn(
-                                    "text-[10px] font-black uppercase tracking-[0.2em] transition-colors",
-                                    isDark ? "hover:text-gold-foil text-gray-400" : "hover:text-proliance-blue text-text-grey"
+                                    "text-[10px] font-black uppercase tracking-[0.2em] transition-colors relative group overflow-hidden h-4",
+                                    isDark ? "hover:text-black text-text-grey" : "hover:text-proliance-blue text-text-grey"
                                 )}
                             >
-                                {link.label}
+                                <div className="flex flex-col transition-transform duration-500 group-hover:-translate-y-1/2">
+                                    <span className="flex items-center h-4">{link.label}</span>
+                                    <span className="flex items-center h-4">{link.label}</span>
+                                </div>
                             </Link>
                         ))}
 
                         <button className={cn(
-                            "px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500",
-                            isDark
-                                ? "border border-gold-foil text-gold-foil hover:bg-gold-foil hover:text-executive-navy"
-                                : "bg-proliance-blue text-white hover:bg-executive-navy shadow-lg"
+                            "px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 bg-black text-white hover:bg-black/80 shadow-lg"
                         )}>
                             {ctaText}
                         </button>
                     </div>
 
                     <button
-                        className={cn("md:hidden", isDark ? "text-white" : "text-executive-navy")}
+                        className={cn("md:hidden text-executive-navy")}
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
-                </div>
+                </motion.div>
             </motion.nav>
 
             {/* Mobile Menu */}
