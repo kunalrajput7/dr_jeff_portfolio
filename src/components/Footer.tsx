@@ -43,12 +43,12 @@ export function Footer() {
                         <h6 className="font-serif text-xl text-gold-foil italic mb-8">Clinical Locations</h6>
                         <div className="space-y-6">
                             <div>
-                                <p className="font-sans text-[10px] font-black text-white/30 uppercase tracking-widest mb-1">Seattle, WA</p>
-                                <p className="font-sans text-sm text-white/60 font-bold">Proliance Spine Center of Excellence</p>
-                            </div>
-                            <div>
                                 <p className="font-sans text-[10px] font-black text-white/30 uppercase tracking-widest mb-1">Honolulu, HI</p>
                                 <p className="font-sans text-sm text-white/60 font-bold">Queen's Medical Center (Visiting Surgeon)</p>
+                            </div>
+                            <div>
+                                <p className="font-sans text-[10px] font-black text-white/30 uppercase tracking-widest mb-1">Seattle, WA</p>
+                                <p className="font-sans text-sm text-white/60 font-bold">Proliance Spine Center of Excellence</p>
                             </div>
                         </div>
                     </motion.div>
@@ -81,10 +81,20 @@ export function Footer() {
                     >
                         <h6 className="font-serif text-xl text-gold-foil italic mb-8">Network</h6>
                         <ul className="space-y-4">
-                            {["LinkedIn", "Doximity", "ResearchGate", "IntuitiveX"].map(item => (
-                                <li key={item}>
-                                    <a href="#" className="font-sans text-[10px] font-black text-white/40 uppercase tracking-[0.2em] hover:text-white transition-colors">
-                                        {item}
+                            {[
+                                { name: "LinkedIn", url: "https://www.linkedin.com/in/jeffreyroh/" },
+                                { name: "Doximity", url: "https://www.doximity.com/pub/jeffrey-roh-md" },
+                                { name: "ResearchGate", url: "https://www.researchgate.net/scientific-contributions/Jeffrey-S-Roh-11891140" },
+                                { name: "IntuitiveX", url: "https://www.intuitivex.com/team" }
+                            ].map(item => (
+                                <li key={item.name}>
+                                    <a
+                                        href={item.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-sans text-[10px] font-black text-white/40 uppercase tracking-[0.2em] hover:text-white transition-colors"
+                                    >
+                                        {item.name}
                                     </a>
                                 </li>
                             ))}
