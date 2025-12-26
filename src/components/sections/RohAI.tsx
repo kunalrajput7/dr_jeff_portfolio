@@ -56,7 +56,7 @@ export function RohAI() {
                     >
                         <div className="backdrop-blur-xl bg-white/40 border border-executive-navy/10 px-6 py-3 rounded-full shadow-xl">
                             <p className="font-sans text-[10px] font-black uppercase tracking-widest text-executive-navy">
-                                <span className="text-proliance-blue mr-2">●</span> Surgical Logic Protocol v4.2
+                                24/7 Neural Intelligence • LIVE
                             </p>
                         </div>
                     </motion.div>
@@ -66,11 +66,19 @@ export function RohAI() {
                         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                         className="absolute -bottom-12 -right-8 z-20 hidden lg:block"
                     >
-                        <div className="backdrop-blur-xl bg-executive-navy/5 border border-executive-navy/10 px-6 py-3 rounded-full shadow-xl">
-                            <p className="font-sans text-[10px] font-black uppercase tracking-widest text-executive-navy">
-                                24/7 Neural Intelligence • LIVE
-                            </p>
-                        </div>
+                        <a
+                            href="https://excelhealth1476.companionstudio.ai/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative inline-flex items-center gap-3 px-6 py-3 bg-black/90 backdrop-blur-md border border-white/20 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:bg-black hover:scale-105 transition-all duration-300"
+                        >
+                            <span className="relative flex h-3 w-3">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                            </span>
+                            <span className="font-outfit text-white font-medium tracking-wide text-sm">Launch Full Experience</span>
+                            <svg className="w-4 h-4 text-white/70 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                        </a>
                     </motion.div>
 
                     {/* The Frame Container - Static (No Entry Animation) */}
@@ -105,23 +113,6 @@ export function RohAI() {
                                 allow="microphone; clipboard-write; encrypted-media; picture-in-picture; web-share"
                                 loading="eager"
                             />
-
-                            {/* Overlay Button for Full Functionality */}
-                            <div className="absolute bottom-8 right-8 z-20">
-                                <a
-                                    href="https://excelhealth1476.companionstudio.ai/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group relative inline-flex items-center gap-3 px-6 py-3 bg-executive-navy/90 backdrop-blur-md border border-white/20 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:bg-executive-navy hover:scale-105 transition-all duration-300"
-                                >
-                                    <span className="relative flex h-3 w-3">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                                    </span>
-                                    <span className="font-outfit text-white font-medium tracking-wide text-sm">Start Conversation with Dr. Roh</span>
-                                    <svg className="w-4 h-4 text-white/70 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
