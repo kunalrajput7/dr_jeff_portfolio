@@ -48,9 +48,35 @@ export function Navbar() {
                             ? "text-executive-navy border-executive-navy/10"
                             : "text-executive-navy border-executive-navy/5"
                     )}>
-                    <Link href="/" className="font-serif font-black tracking-tight text-xl lg:text-2xl">
-                        DR. JEFFREY ROH
-                    </Link>
+                    <a
+                        href="/"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = "/";
+                        }}
+                        className="font-serif font-black tracking-tight text-xl lg:text-2xl flex"
+                    >
+                        {"DR. JEFFREY ROH".split("").map((letter, index) => (
+                            <motion.span
+                                key={index}
+                                animate={{ y: [0, -6, 0] }}
+                                transition={{
+                                    duration: 0.4,
+                                    repeat: Infinity,
+                                    delay: index * 0.4,
+                                    repeatDelay: (15 - 1) * 0.4,
+                                    ease: "easeInOut"
+                                }}
+                                style={{
+                                    display: "inline-block",
+                                    whiteSpace: "pre",
+                                    minWidth: letter === " " ? "0.25em" : "auto"
+                                }}
+                            >
+                                {letter}
+                            </motion.span>
+                        ))}
+                    </a>
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-10">
