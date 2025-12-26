@@ -67,7 +67,7 @@ export function RohAI() {
                         className="absolute -bottom-12 -right-8 z-20 hidden lg:block"
                     >
                         <a
-                            href="https://excelhealth1476.companionstudio.ai/"
+                            href="https://excelhealthai.cognitionthrives.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative inline-flex items-center gap-3 px-6 py-3 bg-black/90 backdrop-blur-md border border-white/20 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:bg-black hover:scale-105 transition-all duration-300"
@@ -87,16 +87,7 @@ export function RohAI() {
                     >
                         {/* Top Control Bar Decoration */}
                         <div className="h-12 bg-white border-b border-executive-navy/5 flex items-center px-6 gap-2 shrink-0 z-20">
-                            <div className="flex gap-1.5">
-                                <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
-                                <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
-                                <div className="w-3 h-3 rounded-full bg-[#28c840]" />
-                            </div>
-                            {/* <div className="flex-1 text-center pr-12">
-                                <span className="font-sans text-[10px] font-black uppercase tracking-[0.2em] text-executive-navy/40">
-                                    https://excelhealth1476.companionstudio.ai/
-                                </span>
-                            </div> */}
+                            {/* Buttons Removed */}
                         </div>
                         {/* Text Overlay */}
                         <div className="absolute top-12 left-0 w-8 h-8 border-t-2 border-l-2 border-gold-foil m-4 z-20 opacity-40 pointer-events-none" />
